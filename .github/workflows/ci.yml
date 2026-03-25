@@ -16,7 +16,10 @@ jobs:
           node-version: '12'
 
       - name: Install dependencies
-        run: npm install --legacy-peer-deps && npm install font-awesome && npm install @types/jquery@3.5.5
+        run: |
+          npm install --legacy-peer-deps
+          npm install font-awesome
+          npm install @types/jquery@3.5.5 @types/ws@7.4.7 @types/minimatch@3.0.5 angular-file@3.1.2
 
       - name: Build
         run: npm run build
