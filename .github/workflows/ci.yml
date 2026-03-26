@@ -29,3 +29,6 @@ jobs:
         with:
           name: dist
           path: dist/
+
+      - name: Build Docker image
+        run: docker build -t shopizer-admin:${{ github.sha }} .
